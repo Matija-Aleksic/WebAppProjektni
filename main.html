@@ -6,60 +6,102 @@
   <title>News Page</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <header >
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">Home</a>
-      <a class="nav-item nav-link" href="#">Politik</a>
-      <a class="nav-item nav-link" href="#">Sport</a>
-      <a class="nav-item nav-link" href="#">Administracija</a>
+  <section>
+    <header >
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#">Home</a>
+        <a class="nav-item nav-link" href="#Politik">Politik</a>
+        <a class="nav-item nav-link" href="#">Sport</a>
+        <a class="nav-item nav-link" href="#">Administracija</a>
+      </div>
+    </header>
+  
+    <div class="logo-space">
+      <img src="images/logo.png" height="80" >
     </div>
-  </header>
+  
+    <div id="Politik" class="container-fluid">
+      <div class="row">
+        <div  class="col-md-2 col-sm-6">
+          <div class="blackbox"><p></p></div>
+          <article>
+            <h2>politik</h2>
+          </article>
+        </div>
+        <div  class="col-md-3 col-sm-6">
+          <article>
+            <img class="articleimg" src="images/image1.jpg" alt="Article 2">
+            <h6>podnaslov</h6>
+            <h4>Article 2</h4>
+            <p>Short description of Article 2 sample text or lorem ipsum im too lazy to write something goods o im just going to write something just to fil space ba balba lbablablablabla al abl a bblabab mrp bmaerl hksae t;ohs thrth;olkeamn;ogrmga;lerk na;ero .</p>
+          </article>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <article>
+            <img class="articleimg" src="images/image2.jpg" alt="Article 3">
+            <h6>podnaslov</h6>
+            <h4>Article 3</h4>
+            <p>Short description of Article 3 sample text or lorem ipsum im too lazy to write something goods o im just going to write something just to fil space ba balba lbablablablabla al abl a bblabab mrp bmaerl hksae t;ohs thrth;olkeamn;ogrmga;lerk na;ero .</p>
+          </article>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <article>
+            <img class="articleimg" src="images/image3.jpg" alt="Article 4">
+            <h6>podnaslov</h6>
+            <h4>Article 4</h4>
+            <p>Short description of Article 4 sample text or lorem ipsum im too lazy to write something goods o im just going to write something just to fil space ba balba lbablablablabla al abl a bblabab mrp bmaerl hksae t;ohs thrth;olkeamn;ogrmga;lerk na;ero .</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  
+    <div id="Sport" class="container-fluid">
+      <div class="row">
+        <div  class="col-md-2 col-sm-6">
+          <div class="blackbox"><p></p></div>
+          <article>
+            <h2>Sport</h2>
+          </article>
+        </div>
+        <div  class="col-md-3 col-sm-6">
+          <article>
+            <img class="articleimg" src="images/image1.jpg" alt="Article 2">
+            <h6>podnaslov</h6>
+            <h4>Article 2</h4>
+            <p>Short description of Article 2 sample text or lorem ipsum im too lazy to write something goods o im just going to write something just to fil space ba balba lbablablablabla al abl a bblabab mrp bmaerl hksae t;ohs thrth;olkeamn;ogrmga;lerk na;ero .</p>
+          </article>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <article>
+            <img class="articleimg" src="images/image2.jpg" alt="Article 3">
+            <h6>podnaslov</h6>
+            <h4>Article 3</h4>
+            <p>Short description of Article 3 sample text or lorem ipsum im too lazy to write something goods o im just going to write something just to fil space ba balba lbablablablabla al abl a bblabab mrp bmaerl hksae t;ohs thrth;olkeamn;ogrmga;lerk na;ero .</p>
+          </article>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <article>
+            <img class="articleimg" src="images/image3.jpg" alt="Article 4">
+            <h6>podnaslov</h6>
+            <h4>Article 4</h4>
+            <p>Short description of Article 4 sample text or lorem ipsum im too lazy to write something goods o im just going to write something just to fil space ba balba lbablablablabla al abl a bblabab mrp bmaerl hksae t;ohs thrth;olkeamn;ogrmga;lerk na;ero .</p>
+          </article>
+        </div>
+      </div>
+    </div>
 
+  </section>
+  
+
+
+</body>
+<footer>
   <div class="logo-space">
     <img src="images/logo.png" height="80" >
   </div>
-
-  <main class="container mt-4">
-    <div class="row">
-      <div class="col-md-8">
-        <section>
-          <h1>Latest News</h1>
-          <article>
-            <h2>Article Title 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at elit id lorem tincidunt cursus. Sed tempor eu justo vitae dignissim. Sed in enim in justo consectetur tristique. Nulla in rutrum justo. Fusce sed semper metus, in consequat orci.</p>
-            <a href="#" class="btn btn-primary">Read more</a>
-          </article>
-
-          <article>
-            <h2>Article Title 2</h2>
-            <p>Quisque volutpat neque et finibus feugiat. Vivamus venenatis ligula sed eros luctus, in placerat nisi placerat. Donec non dictum tortor. Sed cursus tristique malesuada.</p>
-            <a href="#" class="btn btn-primary">Read more</a>
-          </article>
-        </section>
-      </div>
-
-      <div class="col-md-4">
-        <aside>
-          <h2>Popular News</h2>
-          <ul class="list-group">
-            <li class="list-group-item"><a href="#">Article 1</a></li>
-            <li class="list-group-item"><a href="#">Article 2</a></li>
-            <li class="list-group-item"><a href="#">Article 3</a></li>
-            <li class="list-group-item"><a href="#">Article 4</a></li>
-            <li class="list-group-item"><a href="#">Article 5</a></li>
-          </ul>
-        </aside>
-      </div>
-    </div>
-  </main>
-
-  <footer class="bg-dark text-white text-center py-3 mt-4">
-    <p>&copy; 2023 News Site. All rights reserved.</p>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+</footer>
 </html>
