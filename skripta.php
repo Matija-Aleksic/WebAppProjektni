@@ -1,20 +1,19 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $naslov = $_POST['title'];
-    $sazetak = $_POST['about'];
-    $tekst = $_POST['content'];
-    $slika = $_FILES['pphoto']['name'];
-    $kategorija = $_POST['category'];
-    $arhiva = isset($_POST['archive']) ? 'Da' : 'Ne';
-    $datum  = date("Y-m-d");
-
-    echo "<h2>Prikaz unesenih podataka:</h2>";
-    echo "<p>Naslov: $naslov</p>";
-    echo "<p>Sažetak: $sazetak</p>";
-    echo "<p>Tekst: $tekst</p>";
-    echo "<p>Slika: $slika</p>";
-    echo "<p>Kategorija: $kategorija</p>";
-    echo "<p>Spremiti u arhivu: $arhiva</p>";
-    echo "<p>Datum: $datum</p>";
+include 'connect.php';
+$picture = $_FILES['pphoto']['name'];
+$title = $_POST['title'];
+$about = $_POST['about'];
+$content = $_POST['content'];
+$category = $_POST['category'];
+$date = date('d.m.Y.');
+if (isset($_POST['archive'])) {
+    $archive = 1;
+} else {
+    $archive = 0;
 }
+$target_dir = 'img/' . $picture;
+move_uploaded_file($_FILES["pphoto"]["tmp_name"], $target_dir);
+$query = "INSERT INTO article (datum, naslov, sazetak, tekst, slika, kategorija, arhiva ) VALUES ('$date', '$title', '$about', '$content', '$picture', '$category', '$archive')";
+$result = mysqli_query($dbc, $query) or die('Error querying databese.');
+mysqli_close($dbc); 
 ?>
