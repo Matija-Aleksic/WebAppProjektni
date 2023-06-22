@@ -6,6 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $slika = $_FILES['pphoto']['name'];
     $kategorija = $_POST['category'];
     $arhiva = isset($_POST['archive']) ? 'Da' : 'Ne';
+    $datum  = date("Y-m-d");
 
     echo "<h2>Prikaz unesenih podataka:</h2>";
     echo "<p>Naslov: $naslov</p>";
@@ -14,5 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "<p>Slika: $slika</p>";
     echo "<p>Kategorija: $kategorija</p>";
     echo "<p>Spremiti u arhivu: $arhiva</p>";
+    echo "<p>Datum: $datum</p>";
 }
 ?>
