@@ -35,9 +35,7 @@
         define('UPLPATH', 'img/');
 
         include 'connect.php';
-
-        // Retrieve the article information from the database
-        $query = "SELECT * FROM article WHERE id = ?"; // Replace id with the specific article ID
+        $query = "SELECT * FROM article WHERE id = ?";
         $stmt = mysqli_prepare($dbc, $query);
 
         if ($stmt) {
@@ -55,8 +53,6 @@
                 $slika = $row['slika'];
                 $kategorija = $row['kategorija'];
                 $arhiva = $row['arhiva'];
-
-                // Generate the HTML news article
                 echo '<article>';
                 echo '<h2 class="clanakh2">' . $naslov . '</h2>';
                 echo '<p class = "datum">' . $datum . '</p>';
