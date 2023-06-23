@@ -58,12 +58,12 @@
 
                 // Generate the HTML news article
                 echo '<article>';
-                echo '<h2>' . $naslov . '</h2>';
-                echo '<p>' . $datum . '</p>';
+                echo '<h2 class="clanakh2">' . $naslov . '</h2>';
+                echo '<p class = "datum">' . $datum . '</p>';
                 echo '<img width="100%" height="400px"  src="' . UPLPATH . $row['slika'] . '">';
-                echo '<p>' . $sazetak . '</p>';
-                echo '<div>' . $tekst . '</div>';
-                echo '<p>Category: ' . $kategorija . '</p>';
+                echo '<p class="clanak">' . $sazetak . '</p>';
+                echo '<div class="clanakp">' . $tekst . '</div>';
+                echo '<p >Category: ' . $kategorija . '</p>';
                 echo '</article>';
             } else {
                 echo 'Article not found.';

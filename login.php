@@ -28,7 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // Verify the entered password against the stored hashed password
                 if (password_verify($password, $hashedPassword)) {
-                    $_SESSION['userid'] = $row['id'];
+                    $_SESSION['privilegije'] = $row['privilegije'];
+                    $_SESSION['name'] = $row['name'];
                     header("Location: main.php"); // Replace with the desired page
                     exit;
                 } else {

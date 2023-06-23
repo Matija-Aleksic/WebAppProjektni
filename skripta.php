@@ -24,8 +24,16 @@ if (isset($_POST['archive'])) {
 }
 $target_dir = 'img/' . $picture;
 move_uploaded_file($_FILES["pphoto"]["tmp_name"], $target_dir);
-$query = "INSERT INTO article (datum, naslov, sazetak, tekst, slika, kategorija, arhiva ) VALUES ('$date', '$title', '$about', '$content', '$picture', '$category', '$archive')";
-$result = mysqli_query($dbc, $query) or die('Error querying databese.');
+$query = "INSERT INTO article (datum, naslov, sazetak, tekst, slika, kategorija, arhiva) VALUES (?, ?, ?, ?, ?, ?, ?)";
+$stmt = mysqli_prepare($dbc, $query);
+mysqli_stmt_bind_param($stmt, "sssssss", $date, $title, $about, $content, $picture, $category, $archive);
+$result = mysqli_stmt_execute($stmt);
+
+if ($result) {
+    echo "Data inserted successfully!";
+} else {
+    echo "Error querying database: " . mysqli_stmt_error($stmt);
+}
 mysqli_close($dbc);
 
 ?>

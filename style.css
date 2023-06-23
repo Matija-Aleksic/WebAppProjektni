@@ -108,6 +108,51 @@ article {
   padding: 15px;
   margin-bottom: 20px;
 }
+.clanakh2{
+  display: flex;
+  color: rgb(0, 0, 0);
+  font-weight:300;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  font-size: 50px;
+  border-left: solid rgb(105, 102, 102) 4px;
+  width: 60%;
+  margin-left: 23%;
+}
+.link{
+  width: 40%;
+  color: blue;
+  font-weight: bold;
+}
+.clanak{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    font-size: xx-large;
+    font-weight: 400;
+    font-style: italic;
+    font-family: initial;
+}
+.clanakp{
+  display: flex;
+  font-size: larger;
+  width: 80%;
+  font-family: sans-serif;
+  margin: 0 auto;
+}
+.datum{
+  display: flex;
+  color: rgb(149 147 147);
+  font-weight: lighter;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  font-size: 25px;
+  width: 46%;
+  margin-left: 11%;
+  margin-bottom: 20px;
+}
 
 article h2 {
   font-size: 24px;
