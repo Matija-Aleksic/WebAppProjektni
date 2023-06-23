@@ -3,6 +3,7 @@
 <?php
 include 'connect.php';
 define('UPLPATH', 'img/');
+session_start();
 ?>
 
 <head>
@@ -23,7 +24,7 @@ define('UPLPATH', 'img/');
           <a class="nav-item nav-link" href="#Home">Home</a>
           <a class="nav-item nav-link" href="#Politik">Politik</a>
           <a class="nav-item nav-link" href="#Sport">Sport</a>
-          <a class="nav-item nav-link" href="unos.html">Administracija</a>
+          <a class="nav-item nav-link" href="login.html">Administracija</a>
         </div>
       </nav>
 
