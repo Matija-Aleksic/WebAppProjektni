@@ -44,4 +44,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo 'Username and password are required.';
     }
 }
-?>

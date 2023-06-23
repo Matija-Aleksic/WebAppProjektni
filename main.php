@@ -98,9 +98,6 @@ session_start();
 
   </section>
 
-
-
-
 </body>
 <footer>
   <div class="logo-space">

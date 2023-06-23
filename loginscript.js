@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  $('.login-form').submit(function(event) {
+$(document).ready(function () {
+  $('.login-form').submit(function (event) {
     var username = $('#username').val();
     var password = $('#password').val();
 
@@ -9,7 +9,7 @@ $(document).ready(function() {
     }
   });
 
-  $('.registration-form').submit(function(event) {
+  $('.registration-form').submit(function (event) {
     var registrationUsername = $('#registration-username').val();
     var registrationPassword = $('#registration-password').val();
 
