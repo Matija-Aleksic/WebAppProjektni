@@ -1,155 +1,169 @@
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header styles */
-  header {
-    padding: 10px;
-    border-bottom: 2px solid black;
-    color: black;
-  }
-  header a{
-    color: black;
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
 
-  }
-  
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
+header {
+  padding: 10px;
+  border-bottom: 2px solid black;
+  color: black;
+}
 
-  .logo-space {
-  display:flex;
+header a {
+  color: black;
+
+}
+
+.sport_img img {
+  width: 250px;
+}
+
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo-space {
+  display: flex;
   justify-content: center;
   padding: 20px;
-  }
-  .navbar-nav{
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: row;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-    align-content: stretch;
-    justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: nowrap;
-  }
-  
+}
 
-  
-  /* Main content styles */
-  body{
-margin: 0 auto;
-background-color: lightgray;
-  }
-  section{
-    width: 1000px;
-    margin: 0 auto;
-    background-color: white;
-  }
-  .row image{
-    width: 20%;
-  }
-  .logo-space{
-    display: flex;
-  }
-  .articleimg{
-    width: 100%;
-    height: 150px;
-  }
-  .row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .blackbox{
-    border: solid black 3px;
-  }
-  main {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-  }
-  
-  section {
-    flex-basis: 70%;
-  }
-  
-  section h1 {
-    margin-bottom: 20px;
-  }
-  
-  article {
-    margin-bottom: 20px;
-  }
-  
-  article h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  article p {
-    line-height: 1.5;
-  }
-  
-  article a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  /* Sidebar styles */
-  aside {
-    flex-basis: 25%;
-  }
-  
-  aside h2 {
-    margin-bottom: 10px;
-  }
-  
-  aside ul {
-    list-style-type: none;
-  }
-  
-  aside li {
-    margin-bottom: 5px;
-  }
-  
-  aside li a {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  /* Footer styles */
-  footer {
-    background-color: #918f8f;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  .footer {
-    background-color: #636060;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .footer-logo {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-  }
+.navbar-nav {
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  align-content: stretch;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: nowrap;
+}
+
+
+body {
+  margin: 0 auto;
+  background-color: lightgray;
+}
+
+section {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+}
+.logo-space {
+  display: flex;
+}
+
+.articleimg {
+  width: 100%;
+  height: 150px;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.blackbox {
+  border: solid black 3px;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+section {
+  flex-basis: 70%;
+}
+
+section h1 {
+  margin-bottom: 20px;
+}
+
+article {
+
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+article h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+article p {
+  line-height: 1.5;
+}
+
+article a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Sidebar styles */
+aside {
+  flex-basis: 25%;
+}
+
+aside h2 {
+  margin-bottom: 10px;
+}
+
+aside ul {
+  list-style-type: none;
+}
+
+aside li {
+  margin-bottom: 5px;
+}
+
+aside li a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #918f8f;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #636060;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-logo {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
