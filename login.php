@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'connect.php';
-
+session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['username']) && isset($_POST['password'])) {
         $username = $_POST['username'];
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 // Verify the entered password against the stored hashed password
                 if (password_verify($password, $hashedPassword)) {
-                    $_SESSION['username'] = $username;
+                    $_SESSION['userid'] = $row['id'];
                     header("Location: main.php"); // Replace with the desired page
                     exit;
                 } else {
