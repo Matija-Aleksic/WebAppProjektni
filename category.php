@@ -18,15 +18,12 @@ $kategorija = $_GET['id'];
 </head>
 
 <body>
-    <?php
-    echo $_SESSION['privilegije'];
-    echo $_SESSION['name'];
-    ?>;
+
     <section>
         <header id="Home">
             <nav>
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="#Home">Home</a>
+                    <a class="nav-item nav-link" href="main.php">Home</a>
                     <a class="nav-item nav-link" href="category.php?id=politik">Politik</a>
                     <a class="nav-item nav-link" href="category.php?id=sport">Sport</a>
                     <a class="nav-item nav-link" href="login.html">Administracija</a>

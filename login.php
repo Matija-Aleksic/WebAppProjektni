@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'connect.php';
-session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['username']) && isset($_POST['password'])) {
         $username = $_POST['username'];
@@ -23,6 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (password_verify($password, $hashedPassword)) {
                     $_SESSION['privilegije'] = $row['privilegije'];
                     $_SESSION['name'] = $row['name'];
+                    header("Location: main.php");
                     exit;
                 } else {
                     echo 'Invalid username or password1.';
