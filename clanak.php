@@ -18,10 +18,15 @@
         <header id="Home">
             <nav>
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="main.php">Home</a>
-                    <a class="nav-item nav-link" href="#Politik">Politik</a>
-                    <a class="nav-item nav-link" href="#Sport">Sport</a>
-                    <a class="nav-item nav-link" href="unos.html">Administracija</a>
+                    <a class="nav-item nav-link" href="#Home">Home</a>
+                    <a class="nav-item nav-link" href="category.php?id=politik">Politik</a>
+                    <a class="nav-item nav-link" href="category.php?id=sport">Sport</a>
+                    <a class="nav-item nav-link" href="login.html">Administracija</a>
+                    <?php
+                    if (isset($_SESSION['privilegije']) && $_SESSION['privilegije'] == 1) {
+                        echo '<a class="nav-item nav-link" href="unos.html">unos Novog</a>';
+                    }
+                    ?>
                 </div>
             </nav>
 
@@ -53,7 +58,7 @@
                 $slika = $row['slika'];
                 $kategorija = $row['kategorija'];
                 $arhiva = $row['arhiva'];
-                echo '<article>';
+                echo '<article class="clanakarticle">';
                 echo '<h2 class="clanakh2">' . $naslov . '</h2>';
                 echo '<p class = "datum">' . $datum . '</p>';
                 echo '<img width="100%" height="400px"  src="' . UPLPATH . $row['slika'] . '">';

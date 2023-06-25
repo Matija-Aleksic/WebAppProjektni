@@ -20,7 +20,7 @@ header a {
 }
 
 .sport_img img {
-  width: 250px;
+  width: 225px;
 }
 
 nav ul {
@@ -82,7 +82,7 @@ section {
 .row {
   display: flex;
   justify-content: flex-start;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 
@@ -107,11 +107,18 @@ section h1 {
 article {
   padding: 15px;
   margin-bottom: 20px;
+  max-width: 25%;
+
 }
-.clanakh2{
+
+.clanakarticle {
+  max-width: 100%;
+}
+
+.clanakh2 {
   display: flex;
   color: rgb(0, 0, 0);
-  font-weight:300;
+  font-weight: 300;
   font-family: Arial, Helvetica, sans-serif;
   justify-content: center;
   font-size: 50px;
@@ -119,30 +126,34 @@ article {
   width: 60%;
   margin-left: 23%;
 }
-.link{
+
+.link {
   width: 40%;
   color: blue;
   font-weight: bold;
 }
-.clanak{
+
+.clanak {
   display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    font-size: xx-large;
-    font-weight: 400;
-    font-style: italic;
-    font-family: initial;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  font-size: xx-large;
+  font-weight: 400;
+  font-style: italic;
+  font-family: initial;
 }
-.clanakp{
+
+.clanakp {
   display: flex;
   font-size: larger;
   width: 80%;
   font-family: sans-serif;
   margin: 0 auto;
 }
-.datum{
+
+.datum {
   display: flex;
   color: rgb(149 147 147);
   font-weight: lighter;

@@ -1,6 +1,7 @@
 <?php
 include 'connect.php';
 if (isset($_GET['id'])) {
+
     $id = $_GET['id'];
     $query = "DELETE FROM article WHERE id = ?";
     $stmt = mysqli_prepare($dbc, $query);

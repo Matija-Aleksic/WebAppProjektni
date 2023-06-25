@@ -17,22 +17,19 @@ session_start();
 </head>
 
 <body>
-  <?php
-  echo $_SESSION['privilegije'];
-  echo $_SESSION['name'];
-  ?>;
+
   <section>
     <header id="Home">
       <nav>
         <div class="navbar-nav">
-          <a class="nav-item nav-link" href="#Home">Home</a>
-          <a class="nav-item nav-link" href="#Politik">Politik</a>
-          <a class="nav-item nav-link" href="#Sport">Sport</a>
+          <a class="nav-item nav-link" href="main.php">Home</a>
+          <a class="nav-item nav-link" href="category.php?id=politik">Politik</a>
+          <a class="nav-item nav-link" href="category.php?id=sport">Sport</a>
           <a class="nav-item nav-link" href="login.html">Administracija</a>
           <?php
-            if ($_SESSION['privilegije'] == 1) {
-                echo '<a class="nav-item nav-link" href="unos.html">unos Novog</a>';
-            }
+          if (isset($_SESSION['privilegije']) && $_SESSION['privilegije'] == 1) {
+            echo '<a class="nav-item nav-link" href="unos.html">unos Novog</a>';
+          }
           ?>
         </div>
       </nav>
@@ -69,9 +66,9 @@ session_start();
           echo '<p>' . $row['sazetak'] . '</p>';
           if ($_SESSION['privilegije'] == 1) {
             echo '<a class="link" href="edit.php?id=' . $row['id'] . '">edit </a>';
-            echo'<br>';
-            echo '<a class="link" href="edit.php"> brisanje</a>';
-        }
+            echo '<br>';
+            echo '<a href="delete.php?id=' . $row['id'] . '" onclick="return confirm(\'Are you sure you want to delete this item?\')">Delete</a>';
+          }
           echo '</div></div>';
           echo '</article>';
         } ?>
@@ -103,12 +100,12 @@ session_start();
           echo $row['naslov'];
           echo '</a></h4>';
           echo '<p>' . $row['sazetak'] . '</p>';
-          
+
           if ($_SESSION['privilegije'] == 1) {
             echo '<a class="link" href="edit.php?id=' . $row['id'] . '">edit </a>';
-            echo'<br>';
+            echo '<br>';
             echo '<a href="delete.php?id=' . $row['id'] . '" onclick="return confirm(\'Are you sure you want to delete this item?\')">Delete</a>';
-        }
+          }
           echo '</div></div>';
           echo '</article>';
         } ?>

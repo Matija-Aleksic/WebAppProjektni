@@ -13,10 +13,15 @@
 
     <header>
       <div class="navbar-nav">
-        <a class="nav-item nav-link" href="main.php">Home</a>
-        <a class="nav-item nav-link" href="#Politik">Politik</a>
-        <a class="nav-item nav-link" href="#">Sport</a>
-        <a class="nav-item nav-link" href="#">Administracija</a>
+        <a class="nav-item nav-link" href="#Home">Home</a>
+        <a class="nav-item nav-link" href="category.php?id=politik">Politik</a>
+        <a class="nav-item nav-link" href="category.php?id=sport">Sport</a>
+        <a class="nav-item nav-link" href="login.html">Administracija</a>
+        <?php
+        if ($_SESSION['privilegije'] == 1) {
+          echo '<a class="nav-item nav-link" href="unos.html">unos Novog</a>';
+        }
+        ?>
       </div>
     </header>
 
@@ -51,12 +56,12 @@
         <div class="form-item">
           <label for="category">Kategorija vijesti</l abel>
 
-          <div class="form-field">
-            <select name="category" id="" class="form-field-textual">
-              <option value="sport">sport</option>
-              <option value="politik">politik</option>
-            </select>
-          </div>
+            <div class="form-field">
+              <select name="category" id="" class="form-field-textual">
+                <option value="sport">sport</option>
+                <option value="politik">politik</option>
+              </select>
+            </div>
         </div>
         <div class="form-item">
           <label>Spremiti u arhivu:
@@ -70,8 +75,8 @@
           <button type="submit" value="Prihvati">Prihvati</button>
         </div>
         <?php
-         $_GET['id'];
-         echo '<input type="hidden" name="articleid" value="' . $_GET['id'] . '">';
+        $_GET['id'];
+        echo '<input type="hidden" name="articleid" value="' . $_GET['id'] . '">';
         ?>
       </form>
       <br>
