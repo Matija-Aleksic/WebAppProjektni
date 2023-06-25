@@ -44,9 +44,12 @@ mysqli_close($dbc);
         echo '<header>';
         echo '<div class="navbar-nav">';
         echo '<a class="nav-item nav-link" href="main.php">Home</a>';
-        echo '<a class="nav-item nav-link" href="#Politik">Politik</a>';
-        echo '<a class="nav-item nav-link" href="#">Sport</a>';
-        echo '<a class="nav-item nav-link" href="#">Administracija</a>';
+        echo '<a class="nav-item nav-link" href="category.php?id=politik">Politik</a>';
+        echo '<a class="nav-item nav-link" href="category.php?id=sport">Sport</a>';
+        echo '<a class="nav-item nav-link" href="login.html">Administracija</a>';
+        if (isset($_SESSION['privilegije']) && $_SESSION['privilegije'] == 1) {
+            echo '<a class="nav-item nav-link" href="unos.html">unos Novog</a>';
+        }
         echo '<br>';
         echo '</div>';
         echo '</header>';

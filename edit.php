@@ -18,7 +18,7 @@
         <a class="nav-item nav-link" href="category.php?id=sport">Sport</a>
         <a class="nav-item nav-link" href="login.html">Administracija</a>
         <?php
-        if ($_SESSION['privilegije'] == 1) {
+        if (isset($_SESSION['privilegije']) && $_SESSION['privilegije'] == 1) {
           echo '<a class="nav-item nav-link" href="unos.html">unos Novog</a>';
         }
         ?>
